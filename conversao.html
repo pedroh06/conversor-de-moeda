@@ -18,7 +18,7 @@
     </main>
 
     <script>
-        // Função para formatar valores monetários
+        // Formatar valores monetários
         function formatarMoeda(valor, moeda) {
             return new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
@@ -26,13 +26,12 @@
             }).format(valor);
         }
 
-        // Função para realizar a conversão de moeda
+        // Conversão de moeda
         function converterMoeda() {
             const cotacao = 5.17; // Cotação do dólar
             const valorEmReal = parseFloat(localStorage.getItem('valor')) || 0;
             const valorEmDolar = valorEmReal / cotacao;
 
-            // Exibindo o resultado
             const resultadoElement = document.getElementById('resultado');
             if (valorEmReal > 0) {
                 resultadoElement.innerHTML = `Seus ${formatarMoeda(valorEmReal, 'BRL')} equivalem a ${formatarMoeda(valorEmDolar, 'USD')}`;
@@ -41,7 +40,6 @@
             }
         }
 
-        // Executa a conversão assim que a página carrega
         window.onload = converterMoeda;
     </script>
 </body>
