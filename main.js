@@ -2,7 +2,7 @@ function converter() {
     const real = parseFloat(document.getElementById('real').value);
 
     if (isNaN(real) || real <= 0) {
-        alert('Insira um valor válido em Reais.');
+        document.getElementById('dolar').textContent = 'Insira um valor válido em reais!';
         return;
     }
 
