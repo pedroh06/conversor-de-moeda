@@ -9,17 +9,28 @@
 <body>
     <header>
         <h1>
-            Coversor de Moeda v2
+            Conversor de Moeda v1
         </h1>
     </header>
     <main>
-        <form action="conversao.php" method="get">
+        <form id="form" onsubmit="salvarValor(event)">
             <label for="dinheiro">
                 Insira quanto você tem na carteira:
             </label>
-            <input type="number" name="dinheiro" step="0.01">
+            <input type="number" id="dinheiro" name="dinheiro" step="0.01" required>
             <input type="submit" value="Converter">
         </form>
     </main>
+
+    <script>
+        function salvarValor(event) {
+            event.preventDefault();
+            const valor = document.getElementById("dinheiro").value;
+            // Salva o valor no localStorage
+            localStorage.setItem('valor', valor);
+            // Redireciona para a segunda página
+            window.location.href = 'conversao.html';
+        }
+    </script>
 </body>
 </html>
