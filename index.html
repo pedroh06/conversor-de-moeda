@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>
-            Conversor de Moeda v1
-        </h1>
-    </header>
-    <main>
-        <form id="form" onsubmit="salvarValor(event)">
-            <label for="dinheiro">
-                Insira quanto você tem na carteira:
-            </label>
-            <input type="number" id="dinheiro" name="dinheiro" step="0.01" required>
-            <input type="submit" value="Converter">
-        </form>
-    </main>
+    <div class="container">
+        <h1>Conversor de Real para Dólar</h1>
+        <label for="real">Digite quanto você tem na carteira:</label>
+        <input type="number" id="real" placeholder="Valor em BRL" />
+        <button onclick="converter()">Converter</button>
+        <p id="dolar"></p>
+    </div>
 
-    <script>
-        function salvarValor(event) {
-            event.preventDefault();
-            const valor = document.getElementById("dinheiro").value;
-            // Salva o valor no localStorage
-            localStorage.setItem('valor', valor);
-            window.location.href = 'conversao.html';
-        }
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
