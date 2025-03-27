@@ -11,5 +11,4 @@ function converter() {
 
     document.getElementById('dolar').textContent = `Valor em dólares: $${dolar.toFixed(2)}`;
 
-    console.log("Conversão realizada!");
 }

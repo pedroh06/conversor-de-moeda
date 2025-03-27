@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +14,12 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
 }
@@ -31,12 +33,13 @@ h1 {
     margin-bottom: 15px;
 }
 
-input[type="number"] {
+input {
     padding: 10px;
     width: 100%;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-top: 5px;
 }
 
 button {
@@ -47,6 +50,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    margin: 10px 10px;
 }
 
 button:hover {
